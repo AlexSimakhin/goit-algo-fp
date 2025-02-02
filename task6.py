@@ -20,7 +20,7 @@ def greedy_algorithm(items, budget):
     selected_items = []
 
     # Вибір страв
-    for item, ratio in sorted_items:
+    for item in sorted_items:
         if total_cost + items[item]["cost"] <= budget:
             selected_items.append(item)
             total_cost += items[item]["cost"]

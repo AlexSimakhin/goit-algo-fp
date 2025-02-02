@@ -2,7 +2,6 @@
 import random
 import matplotlib.pyplot as plt
 
-
 def simulate_dice_rolls(num_simulations):
     sum_counts = {i: 0 for i in range(2, 13)}
 
@@ -19,7 +18,6 @@ def simulate_dice_rolls(num_simulations):
 
     return probabilities_percent
 
-
 def plot_probabilities(probabilities_percent):
     sums = list(probabilities_percent.keys())
     probs = list(probabilities_percent.values())
@@ -33,7 +31,6 @@ def plot_probabilities(probabilities_percent):
     plt.grid(axis="y", linestyle="--", alpha=0.7)
     plt.show()
 
-
 def main():
     num_simulations = 100000
     probabilities_percent = simulate_dice_rolls(num_simulations)
@@ -43,7 +40,6 @@ def main():
         print(f"Сума {s}: {p:.2f}%")
 
     plot_probabilities(probabilities_percent)
-
 
 if __name__ == "__main__":
     main()
